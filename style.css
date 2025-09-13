@@ -155,7 +155,7 @@ body {
 
 /* seccion descripcion */
 .seccion_descripcion {
-  position: relative; 
+ /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -175,17 +175,9 @@ body {
   cursor: pointer;
 }
 .seccion_descripcion__imagen {
-  width: 300%;
-  height: 300px;
-  padding: 10px;
-  padding-bottom: 50px;
-  background-color: var(--texto-primario);
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%); 
+   width: 100%;
+  height: 240px;
   object-fit: cover;
-  transition: left 0.3s ease, rigth 0.3s ease, top 0.3s ease,bottom 0.3s ease,width 0.3s ease, heigth 0.3s ease, padding 0.3s ease, background-color 0.3s ease, transform 0.3s ease,border-radius 0.1s 0.2s ease;
 }
 .seccion_descripcion__imagen__variante {
     top: auto;

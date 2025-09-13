@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./assets/" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./assets/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,44 +14,45 @@
     />
   </head>
 
-  <body>
+  <body class="scroll">
     <header class="encabezado">
       <nav class="navegacion">
-        <a class="navegacion_enlace" href="#presentacion">
-          <h2 class="navegacion_titulo">informatorio</h2>
+        <a class="navegacion__enlace" href="#presentacion">
+          <h2 class="navegacion__titulo">Mi portfolio</h2>
         </a>
         <ul class="enlaces">
-          <li class="enlaces_item">
-            <a class="enlaces_enlace" href="#presentacion">Inicio </a>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace" href="#presentacion">Inicio </a>
           </li>
 
-          <li class="enlaces_item">
-            <a class="enlaces_enlace" href="#sobre-mi">Sobre mi</a>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace" href="#sobre-mi">Sobre mi</a>
           </li>
-          <li class="enlaces_item">
-            <a class="enlaces_enlace" href="#proyectos">Proyectos </a>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace" href="#proyectos">Proyectos </a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="principal">
       <section class="presentacion" id="presentacion">
-        <div class="presentacion_contenedor_info">
-          <h1 class="presentacion_titulo">Soy desrrollador</h1>
-          <p class="presentacion_parrafo">
+        <div class="presentacion__contenedor_info">
+          <h1 class="presentacion__titulo">Soy tester junior</h1>
+          <p class="presentacion__parrafo">
             Lorem ipsum, doloibus!r sit amet consectetur adipisicing elit
           </p>
-        </div>
-        <div class="presentacion_contenedor_botones">
-          <a href="#sobre-mi" class="boton" role="button"></a>
-          <a
-            href="./assets/docs/cv.pdf"
-            target="_blank"
-            class="boton boton_oscuro"
-            role="button"
-          >
-            Descargar CV</a
-          >
+        
+          <div class="presentacion__contenedor_botones">
+            <a href="#sobre-mi" class="boton" role="button">Sobre mi</a>
+            <a
+              href="./assets/docs/cv.pdf"
+              target="_blank"
+              class="boton boton_oscuro"
+              role="button"
+            >
+              Descargar CV</a
+            >
+          </div>
         </div>
       </section>
 
@@ -178,7 +179,7 @@
             </div>
             <div class="seccion_descripcion__porta_retrato">
               <img
-                class="seccion_descripcion__imagen seccion_descripcion__imagen_variante"
+                class="seccion_descripcion__imagen"
                 src="./assets/images/profile/trabajo3.jpg"
                 alt="foto mientras me encontraba en una reunion de trabajo"
                 title="selfie en una reunion"
@@ -359,7 +360,7 @@
           <li class="enlaces__item">
             <a
               class="enlaces__enlace enlaces__enlace_footer"
-              href="https://github.com/RamaAlves"
+              href="https://github.com/nancyvanesa"
               target="_blank"
               ><img
                 class="enlaces__icono"
@@ -371,7 +372,7 @@
           <li class="enlaces__item">
             <a
               class="enlaces__enlace enlaces__enlace_footer"
-              href="https://www.instagram.com/ramiro_alves_/"
+              href="https://www.instagram.com/"
               target="_blank"
             >
               <img
@@ -385,7 +386,7 @@
           <li class="enlaces__item">
             <a
               class="enlaces__enlace enlaces__enlace_footer"
-              href="https://twitter.com/1394Alves"
+              href="https://x.com"
               target="_blank"
               ><img
                 class="enlaces__icono"
@@ -403,9 +404,9 @@
           <li class="enlaces__item">
             <a
               class="enlaces__enlace enlaces__enlace_footer"
-              href="mailto:mail@mail.com"
+              href="mailto:znancyvanesa@gmail.com"
               target="_blank"
-              >Mail: mail@mail.com</a
+              >Mail: znancyvanesa@gmail.com</a
             >
           </li>
         </ul>
@@ -434,10 +435,13 @@
         </ul>
       </div>
       <div class="pie_de_pagina__copyright">
-        <p>©️Copyright 2024</p>
+        <p>©️Copyright <span id="year"></span></p>
       </div>
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
     </footer>
   </body>
 </html>
 
-    
+
